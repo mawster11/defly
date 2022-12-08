@@ -3,7 +3,7 @@ import time
 import requests
 from discord.ext import commands
 
-TOKEN = "<MTA1MDM0ODU5NDY1OTU5ODM0Nw.GIEXSH.qlmoB3tN4cpNXYTcqLOuWFqNMONgTZUq78IVUo>"
+TOKEN = "<MTA1MDM0ODU5NDY1OTU5ODM0Nw.GA_obS.M-Ww0y6j6Tem2VPF3hAJdYrNMGTz3Xj6zMnn78>"
 
 bot = commands.Bot(command_prefix="!")
 
