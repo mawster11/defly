@@ -1,0 +1,21 @@
+import os
+import time
+import requests
+from discord.ext import commands
+
+TOKEN = "<MTA1MDM0ODU5NDY1OTU5ODM0Nw.GIEXSH.qlmoB3tN4cpNXYTcqLOuWFqNMONgTZUq78IVUo>"
+
+bot = commands.Bot(command_prefix="!")
+
+def get_defly_price():
+    url = "https://api.coingecko.com/api/v3/coins/defly"
+    response = requests.get(url)
+    response_json = response.json()
+    return response_json["market_data"]["current_price"]["usd"]
+
+@bot.command()
+async def defly(ctx):
+    price = get_defly_price()
+    await ctx.send(f"The current price of Defly is ${price:.2f}.")
+
+bot.run(TOKEN)
